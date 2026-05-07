@@ -4,11 +4,11 @@ import useAuthStore from '../store/useAuthStore';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Plus, Users, Search, Filter, Shield } from 'lucide-react';
+import { Plus, Users, Search, Shield } from 'lucide-react';
 import CreateTeamModal from '@/components/CreateTeamModal';
 import TeamMembersModal from '@/components/TeamMembersModal';
 import { Badge } from '@/components/ui/badge';
-import { cn } from '@/lib/utils';
+
 
 const Teams = () => {
   const [teams, setTeams] = useState<any[]>([]);

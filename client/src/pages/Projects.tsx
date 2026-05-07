@@ -5,11 +5,11 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { format } from 'date-fns';
-import { Users, Plus, FolderKanban, Search, Filter } from 'lucide-react';
+import { Users, Plus, FolderKanban, Search } from 'lucide-react';
 import TeamManagementModal from '@/components/TeamManagementModal';
 import CreateProjectModal from '@/components/CreateProjectModal';
 import ProjectDetailModal from '@/components/ProjectDetailModal';
-import { cn } from '@/lib/utils';
+
 
 const Projects = () => {
   const [projects, setProjects] = useState<any[]>([]);
