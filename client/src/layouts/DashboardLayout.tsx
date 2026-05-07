@@ -81,7 +81,7 @@ const DashboardLayout = () => {
             <div className="size-8 rounded-xl bg-primary flex items-center justify-center text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-110">
               <LayoutDashboard className="size-5" />
             </div>
-            <span className="text-xl bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">TeamTask</span>
+            <span className="text-xl bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">SyncOps</span>
           </Link>
         </div>
         <div className="flex-1 overflow-y-auto py-8 px-4 space-y-10">
