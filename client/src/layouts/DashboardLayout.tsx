@@ -137,7 +137,7 @@ const DashboardLayout = () => {
             <div className="relative">
               <div className="size-10 rounded-xl bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center border border-primary/20 shadow-lg shadow-primary/10 group-hover:shadow-primary/20 transition-all group-hover:scale-105">
                 <span className="text-sm font-black text-primary drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]">
-                  {user.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)}
+                  {(user.name || 'User').split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)}
                 </span>
               </div>
               <div className="absolute -bottom-0.5 -right-0.5 size-3 rounded-full bg-[#09090b] border-2 border-[#09090b] flex items-center justify-center">
@@ -195,7 +195,7 @@ const DashboardLayout = () => {
               onClick={() => setIsUserModalOpen(true)}
             >
               <span className="text-xs font-black text-foreground/80 group-hover:text-primary transition-colors">
-                {user.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)}
+                {(user.name || 'User').split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)}
               </span>
               <div className="absolute -top-1 -right-1 size-2.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity blur-[2px]" />
             </button>
