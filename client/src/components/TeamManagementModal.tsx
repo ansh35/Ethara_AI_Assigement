@@ -126,7 +126,7 @@ const TeamManagementModal: React.FC<TeamManagementModalProps> = ({ isOpen, onClo
                     </TableCell>
                   </TableRow>
                 ) : (
-                  project?.members.map((member) => (
+                  (Array.isArray(project?.members) ? project.members : []).map((member) => (
                     <TableRow key={member._id} className="hover:bg-white/[0.03] transition-colors border-white/5 group">
                       <TableCell className="py-4">
                         <div className="flex items-center gap-3">

@@ -24,7 +24,7 @@ const Projects = () => {
     try {
       setIsLoading(true);
       const response = await api.get('/projects');
-      setProjects(response.data);
+      setProjects(Array.isArray(response.data) ? response.data : []);
     } catch (error) {
       console.error('Failed to fetch projects', error);
     } finally {

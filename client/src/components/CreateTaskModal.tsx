@@ -34,7 +34,7 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({ isOpen, onClose, onSu
   const fetchProjects = async () => {
     try {
       const response = await api.get('/projects');
-      setProjects(response.data);
+      setProjects(Array.isArray(response.data) ? response.data : []);
     } catch (error) {
       console.error('Failed to fetch projects', error);
     }

@@ -89,7 +89,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose, onManageTeam, isAdmin }:
           </div>
           
           <div className="grid grid-cols-1 gap-2">
-            {project.members?.slice(0, 3).map((member: any) => (
+            {(Array.isArray(project.members) ? project.members : []).slice(0, 3).map((member: any) => (
               <div key={member._id} className="flex items-center justify-between p-3 rounded-xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-colors">
                 <div className="flex items-center gap-3">
                   <div className="size-8 rounded-lg bg-accent/20 flex items-center justify-center text-muted-foreground">
@@ -106,7 +106,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose, onManageTeam, isAdmin }:
             {project.members?.length > 3 && (
               <div className="text-center py-2">
                 <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">
-                  + {project.members.length - 3} other specialists
+                  + {(Array.isArray(project.members) ? project.members.length : 0) - 3} other specialists
                 </span>
               </div>
             )}

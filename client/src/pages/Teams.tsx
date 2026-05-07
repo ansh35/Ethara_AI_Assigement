@@ -22,7 +22,7 @@ const Teams = () => {
     try {
       setIsLoading(true);
       const response = await api.get('/teams');
-      setTeams(response.data);
+      setTeams(Array.isArray(response.data) ? response.data : []);
     } catch (error) {
       console.error('Failed to fetch teams', error);
     } finally {

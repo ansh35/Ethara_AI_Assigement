@@ -31,7 +31,7 @@ const Tasks = () => {
     try {
       setIsLoading(true);
       const response = await api.get('/tasks');
-      setTasks(response.data);
+      setTasks(Array.isArray(response.data) ? response.data : []);
     } catch (error) {
       console.error('Failed to fetch tasks', error);
     } finally {
