@@ -43,7 +43,7 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({ isOpen, onClose, onSu
   const handleProjectChange = (projectId: string) => {
     const project = projects.find(p => p._id === projectId);
     setSelectedProject(project);
-    setAssignedTo(''); 
+    setAssignedTo('');
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -65,7 +65,7 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({ isOpen, onClose, onSu
         assignedTo: assignedTo || undefined,
         project: selectedProject._id,
       });
-      
+
       setTitle('');
       setDescription('');
       setPriority('MEDIUM');
@@ -73,7 +73,7 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({ isOpen, onClose, onSu
       setDueDate('');
       setAssignedTo('');
       setSelectedProject(null);
-      
+
       onSuccess();
       onClose();
     } catch (err: any) {
@@ -92,7 +92,7 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({ isOpen, onClose, onSu
             {error}
           </div>
         )}
-        
+
         <div className="space-y-6">
           <div className="space-y-3">
             <Label htmlFor="project" className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/40 ml-1 flex items-center gap-2">
@@ -207,9 +207,9 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({ isOpen, onClose, onSu
                   const directMembers = selectedProject?.members || [];
                   const teamMembers = selectedProject?.team?.members || [];
                   const allMembers = [...directMembers, ...teamMembers];
-                  
+
                   // Filter out duplicates based on _id
-                  const uniqueMembers = allMembers.filter((m, index, self) => 
+                  const uniqueMembers = allMembers.filter((m, index, self) =>
                     index === self.findIndex((t) => t._id === m._id)
                   );
 
@@ -225,16 +225,16 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({ isOpen, onClose, onSu
         </div>
 
         <div className="flex items-center gap-3 pt-4 sticky bottom-0 bg-[#09090b]/10 backdrop-blur-sm pb-1">
-          <Button 
-            type="button" 
-            variant="outline" 
+          <Button
+            type="button"
+            variant="outline"
             onClick={onClose}
             className="flex-1 rounded-2xl h-12 border-white/5 bg-white/[0.03] hover:bg-white/[0.08] font-black text-[10px] uppercase tracking-widest transition-all"
           >
             Abort
           </Button>
-          <Button 
-            type="submit" 
+          <Button
+            type="submit"
             disabled={isLoading}
             className="flex-[2] rounded-2xl h-12 bg-primary text-primary-foreground shadow-2xl shadow-primary/20 hover:scale-[1.02] transition-all font-black text-[10px] uppercase tracking-widest disabled:opacity-50"
           >

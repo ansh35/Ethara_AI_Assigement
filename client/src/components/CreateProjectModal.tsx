@@ -116,16 +116,16 @@ const CreateProjectModal: React.FC<CreateProjectModalProps> = ({ isOpen, onClose
         </div>
 
         <div className="flex items-center gap-3 pt-4">
-          <Button 
-            type="button" 
-            variant="outline" 
+          <Button
+            type="button"
+            variant="outline"
             onClick={onClose}
             className="flex-1 rounded-2xl h-14 border-white/5 bg-white/[0.03] hover:bg-white/[0.08] font-black text-[10px] uppercase tracking-widest transition-all"
           >
             Abort
           </Button>
-          <Button 
-            type="submit" 
+          <Button
+            type="submit"
             disabled={isLoading}
             className="flex-[2] rounded-2xl h-14 bg-primary text-primary-foreground shadow-2xl shadow-primary/20 hover:scale-[1.02] transition-all font-black text-[10px] uppercase tracking-widest disabled:opacity-50"
           >

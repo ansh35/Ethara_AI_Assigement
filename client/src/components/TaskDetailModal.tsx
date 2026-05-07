@@ -1,5 +1,4 @@
 import { Dialog } from './ui/dialog';
-import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { format } from 'date-fns';
 import { Calendar, Clock, User, Hash, AlignLeft, Shield, CheckCircle2, Circle } from 'lucide-react';

@@ -6,7 +6,6 @@ import { LayoutDashboard, FolderKanban, CheckSquare, LogOut, User as UserIcon, U
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Dialog } from '@/components/ui/dialog';
-import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 

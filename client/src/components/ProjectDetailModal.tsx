@@ -3,7 +3,6 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { format } from 'date-fns';
 import { Users, Calendar, User, Layout, FileText, Settings, ShieldCheck, ArrowRight } from 'lucide-react';
-import { cn } from '@/lib/utils';
 
 interface ProjectDetailModalProps {
   project: any;
