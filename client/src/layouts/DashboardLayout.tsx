@@ -24,7 +24,7 @@ const DashboardLayout = () => {
     const fetchProjectsCount = async () => {
       try {
         const response = await api.get('/projects');
-        setProjectsCount(response.data.length);
+        setProjectsCount(response.data?.length || 0);
       } catch (error) {
         console.error('Failed to fetch projects count', error);
       }

@@ -143,7 +143,7 @@ const Dashboard = () => {
           </CardHeader>
           <CardContent className="px-6 py-4 flex-1 overflow-y-auto custom-scrollbar">
             <div className="space-y-4">
-              {data.recentActivity.length === 0 ? (
+              {(data.recentActivity?.length || 0) === 0 ? (
                 <div className="flex flex-col items-center justify-center py-20 text-center">
                   <div className="size-16 rounded-[1.5rem] bg-white/[0.03] border border-white/10 flex items-center justify-center mb-4 shadow-inner">
                     <ListTodo className="size-8 text-muted-foreground/20" />
@@ -151,7 +151,7 @@ const Dashboard = () => {
                   <p className="text-xs font-black uppercase tracking-[0.3em] text-muted-foreground/30">Static Horizon Detected</p>
                 </div>
               ) : (
-                data.recentActivity.map((task) => (
+                data.recentActivity?.map((task) => (
                   <div key={task._id} className="flex items-center gap-4 group cursor-default p-3 rounded-[1rem] hover:bg-white/[0.04] transition-all border border-transparent hover:border-white/5 shadow-none hover:shadow-xl">
                     <div className="size-10 rounded-xl bg-white/[0.05] flex items-center justify-center border border-white/10 group-hover:border-primary/50 transition-all">
                       <FolderKanban className="size-4 text-muted-foreground group-hover:text-primary transition-colors" />
